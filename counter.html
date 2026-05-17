@@ -2,6 +2,60 @@
 <html>
 <head>
     <title>Counter</title>
+    <style>
+        /* style the entire page */
+        body {
+            background: #1a1a2e;        /* dark navy background */
+            color: white;               /* all text is white */
+            font-family: 'Segoe UI', sans-serif;  /* clean modern font */
+            display: flex;              /* flex makes it easy to center things */
+            flex-direction: column;     /* stack items top to bottom */
+            align-items: center;        /* center everything horizontally */
+            justify-content: center;    /* center everything vertically */
+            min-height: 100vh;          /* make the page take up the full screen height */
+            margin: 0;                  /* remove default white border around the page */
+        }
+
+        /* style the title */
+        h2 {
+            font-size: 1.2rem;          /* smaller than default */
+            letter-spacing: 4px;        /* spread the letters apart */
+            text-transform: uppercase;  /* make it all caps */
+            opacity: 0.6;               /* make it slightly faded */
+            margin-bottom: 0.5rem;      /* add space below */
+        }
+
+        /* style the big number */
+        h1 {
+            font-size: 8rem;            /* very large */
+            font-weight: bold;
+            margin: 0.5rem 0;           /* space above and below */
+            color: #e94560;             /* red color */
+        }
+
+        /* style all buttons */
+        button {
+            margin: 0.5rem;             /* space between buttons */
+            padding: 0.7rem 1.5rem;     /* space inside the button */
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;               /* remove default border */
+            border-radius: 8px;         /* rounded corners */
+            cursor: pointer;            /* show hand cursor on hover */
+            transition: transform 0.1s; /* smooth animation on hover */
+        }
+
+        /* slightly enlarge buttons when you hover over them */
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        /* individual button colors */
+        #btn      { background: #e94560; color: white; }  /* red — add */
+        #subtract { background: #16213e; color: white; }  /* dark — subtract */
+        #addTen   { background: #0f3460; color: white; }  /* navy — add ten */
+        #reset    { background: #444;    color: white; }  /* grey — reset */
+    </style>
 </head>
 <body>
     <h2>My Counter</h2>
@@ -9,7 +63,7 @@
     <button id="btn">Click me</button>
     <button id="reset">Reset</button>
     <button id="subtract">-1</button>
-    <button id="Add Ten">+10</button>
+    <button id="addTen">+10</button>
 </body>
 <script>
     let count = 0;
@@ -29,7 +83,7 @@
         count = count - 1;
         numberDisplay.textContent = count;
     });
-    let addTenButton = document.getElementById('Add Ten');
+    let addTenButton = document.getElementById('addTen');
     addTenButton.addEventListener('click', function() {
         count = count + 10;
         numberDisplay.textContent = count;
