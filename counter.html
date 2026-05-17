@@ -4,8 +4,10 @@
     <title>Counter</title>
 </head>
 <body>
+    <h2>My Counter</h2>
     <h1 id="number">0</h1>
     <button id="btn">Click me</button>
+    <button id="reset">Reset</button>
 </body>
 <script>
     let count = 0;
@@ -13,6 +15,11 @@
     let numberDisplay = document.getElementById('number');
     button.addEventListener('click', function(){
         count = count + 1;
+        numberDisplay.textContent = count;
+    });
+    let resetButton = document.getElementById('reset');
+    resetButton.addEventListener('click', function() {
+        count = 0;
         numberDisplay.textContent = count;
     });
 </script>
