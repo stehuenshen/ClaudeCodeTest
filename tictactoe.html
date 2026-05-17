@@ -23,7 +23,7 @@
       margin-bottom: 1rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #e94560;
+      color: #ffffff;
     }
 
     #status {
@@ -121,7 +121,7 @@
   </style>
 </head>
 <body>
-  <h1>Tic Tac Toe</h1>
+  <h1>Steven's Game</h1>
 
   <div id="score">
     <div class="score-box x-score">
@@ -138,7 +138,7 @@
     </div>
   </div>
 
-  <div id="status">X's turn</div>
+  <div id="status">Steven goes first!</div>
   <div id="board"></div>
   <button id="reset">New Game</button>
 
@@ -159,7 +159,7 @@
       board = Array(9).fill('');
       current = 'X';
       over = false;
-      statusEl.textContent = "X's turn";
+      statusEl.textContent = "Steven goes first!";
       render();
     }
 
