@@ -8,6 +8,8 @@
     <h1 id="number">0</h1>
     <button id="btn">Click me</button>
     <button id="reset">Reset</button>
+    <button id="subtract">-1</button>
+    <button id="Add Ten">+10</button>
 </body>
 <script>
     let count = 0;
@@ -20,6 +22,16 @@
     let resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', function() {
         count = 0;
+        numberDisplay.textContent = count;
+    });
+    let subtractButton = document.getElementById('subtract');
+    subtractButton.addEventListener('click', function() {
+        count = count - 1;
+        numberDisplay.textContent = count;
+    });
+    let addTenButton = document.getElementById('Add Ten');
+    addTenButton.addEventListener('click', function() {
+        count = count + 10;
         numberDisplay.textContent = count;
     });
 </script>
