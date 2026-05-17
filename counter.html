@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+</head>
+<body>
+    <h1 id="number">0</h1>
+    <button id="btn">Click me</button>
+</body>
+<script>
+    let count = 0;
+    let button = document.getElementById('btn');
+    let numberDisplay = document.getElementById('number');
+    button.addEventListener('click', function(){
+        count = count + 1;
+        numberDisplay.textContent = count;
+    });
+</script>
+</html>
